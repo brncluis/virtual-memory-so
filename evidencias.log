@@ -1,0 +1,57 @@
+Script started on 2026-11-20 07:18:00-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="148" LINES="13"]
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K[A[K[A[K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ ]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ ]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$  ]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$  ]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$          ^C[?2004l[?2004h[?2004l
+]666;vte.shell.postexec=130\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ ls
+[?2004l]133;C\]666;vte.shell.preexec!\BACKING_STORE.bin  Makefile  README.md  correct.txt  evidencias.log  main.c  vm.c  vm.h
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git[K[K[Kcat b[Kvm.;[Kh [K
+[?2004l]133;C\]666;vte.shell.preexec!\#ifndef VM_H
+#define VM_H
+
+#include <stdio.h>
+
+#define NUM_PAGINAS 256
+#define NUM_FRAMES 128
+#define TAM_FRAME 256
+#define TAM_TLB 16
+
+typedef enum {
+    POLITICA_FIFO,
+    POLITICA_LRU
+} Politica;
+
+typedef struct {
+    int frame;
+    int valido;
+} EntradaTabelaPaginas;
+
+typedef struct {
+    int pagina;
+    unsigned long carregado_em;
+    unsigned long ultimo_uso;
+} InfoFrame;
+
+typedef struct {
+    int pagina;
+    int frame;
+    int valido;
+    unsigned long carregado_em;
+    unsigned long ultimo_uso;
+} EntradaTLB;
+
+typedef struct {
+    signed char ram[NUM_FRAMES][TAM_FRAME];
+    EntradaTabelaPaginas tabela_paginas[NUM_PAGINAS];
+    InfoFrame frames[NUM_FRAMES];
+    EntradaTLB tlb[TAM_TLB];
+
+    int proximo_frame_livre;
+    unsigned long relogio;
+
+    Politica politica_pagina;
+    Politica politica_tlb;
+
+    int total_enderecos;
+    int faltas_pagina;
+    int acertos_tlb;
+} VM;
+
+#endif]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/

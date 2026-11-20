@@ -1,0 +1,5 @@
+vm
+*.o
+BACKING_STORE.bin
+adresses.txt
+correct.txt
