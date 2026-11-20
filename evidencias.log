@@ -54,4 +54,47 @@ typedef struct {
     int acertos_tlb;
 } VM;
 
-#endif]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/
+#endif]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git  init
+[?2004l]133;C\]666;vte.shell.preexec!\[33mhint: Using 'master' as the name for the initial branch. This default branch name[m
+[33mhint: will change to "main" in Git 3.0. To configure the initial branch name[m
+[33mhint: to use in all of your new repositories, which will suppress this warning,[m
+[33mhint: call:[m
+[33mhint:[m
+[33mhint: 	git config --global init.defaultBranch <name>[m
+[33mhint:[m
+[33mhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and[m
+[33mhint: 'development'. The just-created branch can be renamed via this command:[m
+[33mhint:[m
+[33mhint: 	git branch -m <name>[m
+[33mhint:[m
+[33mhint: Disable this message with "git config set advice.defaultBranchName false"[m
+Initialized empty Git repository in /home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass/.git/
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git  branch M[K-m[KM main
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git  status
+[?2004l]133;C\]666;vte.shell.preexec!\On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.gitignore[m
+	[31mMakefile[m
+	[31mREADME.md[m
+	[31mevidencias.log[m
+	[31mmain.c[m
+	[31mvm.c[m
+	[31mvm.h[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git  add .
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git  commit -m "inicializacao das estruturas e constantes vm.;h[K[K[K[K[Kna vm.h"
+[?2004l]133;C\]666;vte.shell.preexec!\[main (root-commit) 83f1d94] inicializacao das estruturas e constantes na vm.h
+ 7 files changed, 114 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Makefile
+ create mode 100644 README.md
+ create mode 100644 evidencias.log
+ create mode 100644 main.c
+ create mode 100644 vm.c
+ create mode 100644 vm.h
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/vi

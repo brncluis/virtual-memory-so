@@ -49,4 +49,8 @@ typedef struct {
     int acertos_tlb;
 } VM;
 
+void inicializar_vm(VM *vm, Politica pol_pagina, Politica pol_tlb);
+void extrair_pagina_deslocamento(int endereco_logico, int *pagina, int *deslocamento);
+
+
 #endif
