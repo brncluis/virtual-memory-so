@@ -144,4 +144,95 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 [?2004l]133;C\]666;vte.shell.preexec!\Enumerating objects: 11, done.
 Counting objects:   9% (1/11)Counting objects:  18% (2/11)Counting objects:  27% (3/11)Counting objects:  36% (4/11)Counting objects:  45% (5/11)Counting objects:  54% (6/11)Counting objects:  63% (7/11)Counting objects:  72% (8/11)Counting objects:  81% (9/11)Counting objects:  90% (10/11)Counting objects: 100% (11/11)Counting objects: 100% (11/11), done.
 Delta compression using up to 16 threads
-Compressing objects:  11% (1/9)Compressing objects:  22% (2/9)Compressing object
+Compressing objects:  11% (1/9)Compressing objects:  22% (2/9)Compressing objects:  33% (3/9)Compressing objects:  44% (4/9)Compressing objects:  55% (5/9)Compressing objects:  66% (6/9)Compressing objects:  77% (7/9)Compressing objects:  88% (8/9)Compressing objects: 100% (9/9)Compressing objects: 100% (9/9), done.
+Writing objects:   9% (1/11)Writing objects:  18% (2/11)Writing objects:  27% (3/11)Writing objects:  36% (4/11)Writing objects:  45% (5/11)Writing objects:  54% (6/11)Writing objects:  63% (7/11)Writing objects:  72% (8/11)Writing objects:  81% (9/11)Writing objects:  90% (10/11)Writing objects: 100% (11/11)Writing objects: 100% (11/11), 3.00 KiB | 3.00 MiB/s, done.
+Total 11 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), done.[K
+To https://github.com/brncluis/virtual-memory-so
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ mak e
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+/usr/bin/x86_64-linux-gnu-ld.bfd: /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:2: all] Error 1
+]666;vte.shell.postexec=2\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git add .
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git commiut[K[Kt -m "criacao do parser  e [K[K[K[Ke [K[K e do identificador de modo de escolha de vitima"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kscolha fifo ou lru"
+[?2004l]133;C\]666;vte.shell.preexec!\[main 084c626] criacao do parser e do identificador de modo de escolha fifo ou lru
+ 3 files changed, 108 insertions(+), 1 deletion(-)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mmake[27m
+[7m./vm adresses.txt lru fifo[27m
+[7m./vm adresses.txt errado fifo[27m
+[7m./vm nao_existe.txt lru fifo[27m[A[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+./vm adresses.txt lru fifo
+./vm adresses.txt errado fifo
+./vm nao_existe.txt lru fifo
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+[01m[Kvm.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kvm.c:45:16:[m[K [01;31m[Kerror: [m[K‘[01m[KEXIT_FAILURE[m[K’ undeclared (first use in this function)
+   45 |         return [01;31m[KEXIT_FAILURE[m[K;
+      |                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kvm.c:3:1:[m[K [01;36m[Knote: [m[K‘[01m[KEXIT_FAILURE[m[K’ is defined in header ‘[01m[K<stdlib.h>[m[K’; this is probably fixable by adding ‘[01m[K#include <stdlib.h>[m[K’
+    2 | #include <string.h>
+  +++ |+[32m[K#include <stdlib.h>[m[K
+    3 | 
+[01m[Kvm.c:45:16:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+   45 |         return [01;36m[KEXIT_FAILURE[m[K;
+      |                [01;36m[K^~~~~~~~~~~~[m[K
+[01m[Kvm.c:51:10:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kler_politica[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   51 |     if (![01;31m[Kler_politica[m[K(argv[2], &pol_pagina)) {
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kvm.c:82:14:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kparsear_endereco_linha[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   82 |         if (![01;31m[Kparsear_endereco_linha[m[K(linha, &endereco_logico)) {
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kvm.c:111:12:[m[K [01;31m[Kerror: [m[K‘[01m[KEXIT_SUCCESS[m[K’ undeclared (first use in this function)
+  111 |     return [01;31m[KEXIT_SUCCESS[m[K;
+      |            [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kvm.c:111:12:[m[K [01;36m[Knote: [m[K‘[01m[KEXIT_SUCCESS[m[K’ is defined in header ‘[01m[K<stdlib.h>[m[K’; this is probably fixable by adding ‘[01m[K#include <stdlib.h>[m[K’
+make: *** [Makefile:2: all] Error 1
+]133;C\]666;vte.shell.preexec!\bash: ./vm: No such file or directory
+]133;C\]666;vte.shell.preexec!\bash: ./vm: No such file or directory
+]133;C\]666;vte.shell.preexec!\bash: ./vm: No such file or directory
+]666;vte.shell.postexec=127\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+[01m[Kvm.c:3:10:[m[K [01;31m[Kfatal error: [m[Kstlib.h: No such file or directory
+    3 | #include [01;31m[K<stlib.h>[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+make: *** [Makefile:2: all] Error 1
+]666;vte.shell.postexec=2\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+[01m[Kvm.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kvm.c:52:10:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kler_politica[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   52 |     if (![01;31m[Kler_politica[m[K(argv[2], &pol_pagina)) {
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kvm.c:83:14:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kparsear_endereco_linha[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   83 |         if (![01;31m[Kparsear_endereco_linha[m[K(linha, &endereco_logico)) {
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+make: *** [Makefile:2: all] Error 1
+]666;vte.shell.postexec=2\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make clean
+[?2004l]133;C\]666;vte.shell.preexec!\rm -f vm correct.txt
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+[01m[Kvm.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kvm.c:52:10:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kler_politica[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   52 |     if (![01;31m[Kler_politica[m[K(argv[2], &pol_pagina)) {
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kvm.c:83:14:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kparsear_endereco_linha[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   83 |         if (![01;31m[Kparsear_endereco_linha[m[K(linha, &endereco_logico)) {
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+make: *** [Makefile:2: all] Error 1
+]666;vte.shell.postexec=2\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mmake[27m
+[7m./vm adresses.txt lru fifo[27m
+[7m./vm adresses.txt errado fifo[27m
+[7m./vm nao_existe.txt lru fifo[27m[A[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+./vm adresses.txt lru fifo
+./vm adresses.txt errado fifo
+./vm nao_existe.txt lru fifo
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+[01m[Kvm.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kvm.c:52:10:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kler_politica[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   52 |     if (![01;31m[Kler_politica[m[K(argv[2], &pol_pagina)) {
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[Kvm.c:83:14:[m[K [01;31m[Kerror:
