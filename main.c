@@ -1,35 +1,29 @@
 #include "vm.h"
-#include <ctype.h>   
-#include <errno.h>   
-#include <limits.h>  
-#include <stdio.h>   
-#include <stdlib.h>  
-#include <string.h>  
+#include <ctype.h>
+#include <errno.h>
+#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int ler_politica(char *texto, Politica *destino) {
-    
     if (strcmp(texto, "fifo") == 0) {
         *destino = POLITICA_FIFO;
         return 1;
     }
-
     if (strcmp(texto, "lru") == 0) {
         *destino = POLITICA_LRU;
         return 1;
     }
-
     return 0;
-
 }
 
 int parsear_endereco_linha(char *linha, int *endereco_out) {
-    
     char *p = linha;
 
-    while (*p && isspace((unsigned char)*p) != '\0') {
+    while (*p != '\0' && isspace((unsigned char)*p)) {
         p++;
     }
-
     if (*p == '\0') {
         return 0;
     }
@@ -42,18 +36,16 @@ int parsear_endereco_linha(char *linha, int *endereco_out) {
         return 0;
     }
 
-    while (*fim && isspace((unsigned char)*fim)) {
+    while (*fim != '\0' && isspace((unsigned char)*fim)) {
         fim++;
     }
     if (*fim != '\0') {
-        return 0; 
+        return 0;
     }
 
     *endereco_out = (int)valor;
-    return 1; 
-
+    return 1;
 }
-
 
 int main(int argc, char *argv[]) {
     if (argc != 4) {
@@ -62,9 +54,7 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
-    Politica pol_pagina;
-    Politica pol_tlb;
-
+    Politica pol_pagina, pol_tlb;
     if (!ler_politica(argv[2], &pol_pagina)) {
         fprintf(stderr, "Erro: algoritmo de pagina invalido '%s'. Use 'fifo' ou 'lru'.\n", argv[2]);
         return EXIT_FAILURE;
@@ -104,14 +94,20 @@ int main(int argc, char *argv[]) {
             return EXIT_FAILURE;
         }
 
-        int pagina, deslocamento;
-        extrair_pagina_deslocamento(endereco_logico, &pagina, &deslocamento);
+        int endereco_fisico = 0;
+        signed char valor = 0;
 
-        if (vm.total_enderecos < 5) {
-            printf("Linha %d | Logico: %d -> Pagina: %d, Deslocamento: %d\n",
-                   numero_linha, endereco_logico, pagina, deslocamento);
+        if (!traduzir_endereco(&vm, endereco_logico, backing_store, &endereco_fisico, &valor)) {
+            fprintf(stderr, "Erro: falha ao ler 'BACKING_STORE.bin' na linha %d.\n", numero_linha);
+            fclose(arq_enderecos);
+            fclose(backing_store);
+            return EXIT_FAILURE;
         }
-        vm.total_enderecos++;
+
+        if (vm.total_enderecos <= 5) {
+            printf("Virtual address: %d Physical address: %d Value: %d\n",
+                   endereco_logico, endereco_fisico, valor);
+        }
     }
 
     if (vm.total_enderecos == 0) {
@@ -121,7 +117,9 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
-    printf("Total de enderecos lidos com sucesso: %d\n", vm.total_enderecos);
+    printf("Number of Translated Addresses = %d\n", vm.total_enderecos);
+    printf("Page Faults = %d\n", vm.faltas_pagina);
+    printf("Page Fault Rate = %.3f\n", (double)vm.faltas_pagina / vm.total_enderecos);
 
     fclose(arq_enderecos);
     fclose(backing_store);

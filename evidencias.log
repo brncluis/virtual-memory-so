@@ -235,4 +235,142 @@ make: *** [Makefile:2: all] Error 1
 [01m[Kvm.c:52:10:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kler_politica[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
    52 |     if (![01;31m[Kler_politica[m[K(argv[2], &pol_pagina)) {
       |          [01;31m[K^~~~~~~~~~~~[m[K
-[01m[Kvm.c:83:14:[m[K [01;31m[Kerror:
+[01m[Kvm.c:83:14:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kparsear_endereco_linha[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+   83 |         if (![01;31m[Kparsear_endereco_linha[m[K(linha, &endereco_logico)) {
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+make: *** [Makefile:2: all] Error 1
+]133;C\]666;vte.shell.preexec!\bash: ./vm: No such file or directory
+]133;C\]666;vte.shell.preexec!\bash: ./vm: No such file or directory
+]133;C\]666;vte.shell.preexec!\bash: ./vm: No such file or directory
+]666;vte.shell.postexec=127\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7m./vm adresses.txt lru fifo[27m
+[7m./vm adresses.txt errado fifo[27m
+[7m./vm nao_existe.txt lru fifo[27m[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ ./vm adresses.txt lru fifo
+./vm adresses.txt errado fifo
+./vm nao_existe.txt lru fifo
+[?2004l]133;C\]666;vte.shell.preexec!\Linha 1 | Logico: 16916 -> Pagina: 66, Deslocamento: 20
+Linha 2 | Logico: 62493 -> Pagina: 244, Deslocamento: 29
+Linha 3 | Logico: 30198 -> Pagina: 117, Deslocamento: 246
+Linha 4 | Logico: 53683 -> Pagina: 209, Deslocamento: 179
+Linha 5 | Logico: 40185 -> Pagina: 156, Deslocamento: 249
+Total de enderecos lidos com sucesso: 1000
+]133;C\]666;vte.shell.preexec!\Erro: algoritmo de pagina invalido 'errado'. Use 'fifo' ou 'lru'.
+]133;C\]666;vte.shell.preexec!\Erro: nao foi possivel abrir o arquivo 'nao_existe.txt'.
+]666;vte.shell.postexec=1\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git add .
+[?2004l]133;C\]666;vte.shell.preexec!\]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git commit -m "make fi[K[K[Kfile, validacao, de entrada e extracao do e[K[K[K[K[K"
+[?2004l]133;C\]666;vte.shell.preexec!\[main 0048c8e] makefile, validacao, de entrada e extracao
+ 3 files changed, 167 insertions(+), 2 deletions(-)
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ git push
+[?2004l]133;C\]666;vte.shell.preexec!\Enumerating objects: 15, done.
+Counting objects:   7% (1/14)Counting objects:  14% (2/14)Counting objects:  21% (3/14)Counting objects:  28% (4/14)Counting objects:  35% (5/14)Counting objects:  42% (6/14)Counting objects:  50% (7/14)Counting objects:  57% (8/14)Counting objects:  64% (9/14)Counting objects:  71% (10/14)Counting objects:  78% (11/14)Counting objects:  85% (12/14)Counting objects:  92% (13/14)Counting objects: 100% (14/14)Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects:  10% (1/10)Compressing objects:  20% (2/10)Compressing objects:  30% (3/10)Compressing objects:  40% (4/10)Compressing objects:  50% (5/10)Compressing objects:  60% (6/10)Compressing objects:  70% (7/10)Compressing objects:  80% (8/10)Compressing objects:  90% (9/10)Compressing objects: 100% (10/10)Compressing objects: 100% (10/10), done.
+Writing objects:  10% (1/10)Writing objects:  20% (2/10)Writing objects:  30% (3/10)Writing objects:  40% (4/10)Writing objects:  50% (5/10)Writing objects:  60% (6/10)Writing objects:  70% (7/10)Writing objects:  80% (8/10)Writing objects:  90% (9/10)Writing objects: 100% (10/10)Writing objects: 100% (10/10), 5.50 KiB | 5.50 MiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 1 local object.[K
+To https://github.com/brncluis/virtual-memory-so
+   9f733f6..0048c8e  main -> main
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mmake[27m
+[7m./vm adresses.txt fifo fifo[27m
+[7m./vm adresses.txt lru fifo[27m[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+./vm adresses.txt fifo fifo
+./vm adresses.txt lru fifo
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+]133;C\]666;vte.shell.preexec!\Linha 1 | Logico: 16916 -> Pagina: 66, Deslocamento: 20
+Linha 2 | Logico: 62493 -> Pagina: 244, Deslocamento: 29
+Linha 3 | Logico: 30198 -> Pagina: 117, Deslocamento: 246
+Linha 4 | Logico: 53683 -> Pagina: 209, Deslocamento: 179
+Linha 5 | Logico: 40185 -> Pagina: 156, Deslocamento: 249
+Total de enderecos lidos com sucesso: 1000
+]133;C\]666;vte.shell.preexec!\Linha 1 | Logico: 16916 -> Pagina: 66, Deslocamento: 20
+Linha 2 | Logico: 62493 -> Pagina: 244, Deslocamento: 29
+Linha 3 | Logico: 30198 -> Pagina: 117, Deslocamento: 246
+Linha 4 | Logico: 53683 -> Pagina: 209, Deslocamento: 179
+Linha 5 | Logico: 40185 -> Pagina: 156, Deslocamento: 249
+Total de enderecos lidos com sucesso: 1000
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mmake[27m
+[7m./vm adresses.txt fifo fifo[27m
+[7m./vm adresses.txt lru fifo[27m[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+./vm adresses.txt fifo fifo
+./vm adresses.txt lru fifo
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+]133;C\]666;vte.shell.preexec!\Linha 1 | Logico: 16916 -> Pagina: 66, Deslocamento: 20
+Linha 2 | Logico: 62493 -> Pagina: 244, Deslocamento: 29
+Linha 3 | Logico: 30198 -> Pagina: 117, Deslocamento: 246
+Linha 4 | Logico: 53683 -> Pagina: 209, Deslocamento: 179
+Linha 5 | Logico: 40185 -> Pagina: 156, Deslocamento: 249
+Number of Translated Addresses = 1000
+Page Faults = 0
+Page Fault Rate = 0.000
+]133;C\]666;vte.shell.preexec!\Linha 1 | Logico: 16916 -> Pagina: 66, Deslocamento: 20
+Linha 2 | Logico: 62493 -> Pagina: 244, Deslocamento: 29
+Linha 3 | Logico: 30198 -> Pagina: 117, Deslocamento: 246
+Linha 4 | Logico: 53683 -> Pagina: 209, Deslocamento: 179
+Linha 5 | Logico: 40185 -> Pagina: 156, Deslocamento: 249
+Number of Translated Addresses = 1000
+Page Faults = 0
+Page Fault Rate = 0.000
+]666;vte.shell.postexec=0\]7;file://luisdesktop/home/brncluis/Projetos/ProjetoSO_1/virtual-machine/lhass\]0;brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass\]666;vte.shell.precmd!\[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mmake[27m
+[7m./vm adresses.txt fifo fifo[27m
+[7m./vm adresses.txt lru fifo[27m[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+./vm adresses.txt fifo fifo
+./vm adresses.txt lru fifo
+[?2004l]133;C\]666;vte.shell.preexec!\gcc -Wall -Wextra -g -pthread main.c vm.c -o vm
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:125:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kendereco_fisico[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kendereco_logico[m[K’?
+  125 |                    endereco_logico, [01;31m[Kendereco_fisico[m[K, valor);
+      |                                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                     [32m[Kendereco_logico[m[K
+[01m[Kmain.c:125:37:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kmain.c:125:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kvalor[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kvalloc[m[K’?
+  125 |                    endereco_logico, endereco_fisico, [01;31m[Kvalor[m[K);
+      |                                                      [01;31m[K^~~~~[m[K
+      |                                                      [32m[Kvalloc[m[K
+[01m[Kmain.c:[m[K At top level:
+[01m[Kmain.c:130:53:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+  130 |         extrair_pagina_deslocamento(endereco_logico,[01;31m[K [m[K[32m[K&[m[Kpagina, &deslocamento);
+      |                                                     [01;31m[K^[m[K[32m[K~[m[K
+      |                                                     [32m[K)[m[K
+[01m[Kmain.c:132:9:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[Kif[m[K’
+  132 |         [01;31m[Kif[m[K (vm.total_enderecos < 5) {
+      |         [01;31m[K^~[m[K
+[01m[Kmain.c:136:11:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K=[m[K’, ‘[01m[K,[m[K’, ‘[01m[K;[m[K’, ‘[01m[Kasm[m[K’ or ‘[01m[K__attribute__[m[K’ before ‘[01m[K.[m[K’ token
+  136 |         vm[01;31m[K.[m[Ktotal_enderecos++;
+      |           [01;31m[K^[m[K
+[01m[Kmain.c:137:5:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[K}[m[K’ token
+  137 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+[01m[Kmain.c:139:5:[m[K [01;31m[Kerror: [m[Kexpected identifier or ‘[01m[K([m[K’ before ‘[01m[Kif[m[K’
+  139 |     [01;31m[Kif[m[K (vm.total_enderecos == 0) {
+      |     [01;31m[K^~[m[K
+[01m[Kmain.c:146:12:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before string constant
+  146 |     printf([01;31m[K"Number of Translated Addresses = %d\n"[m[K, vm.total_enderecos);
+      |            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kmain.c:146:53:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[Kvm[m[K’; did you mean ‘[01m[KVM[m[K’?
+  146 |     printf("Number of Translated Addresses = %d\n", [01;31m[Kvm[m[K.total_enderecos);
+      |                                                     [01;31m[K^~[m[K
+      |                                                     [32m[KVM[m[K
+[01m[Kmain.c:147:12:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before string constant
+  147 |     printf([01;31m[K"Page Faults = %d\n"[m[K, vm.faltas_pagina);
+      |            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kmain.c:147:34:[m[K [01;31m[Kerror: [m[Kunknown type name ‘[01m[Kvm[m[K’; did you mean ‘[01m[KVM[m[K’?
+  147 |     printf("Page Faults = %d\n", [01;31m[Kvm[m[K.faltas_pagina);
+      |                                  [01;31m[K^~[m[K
+      |                                  [32m[KVM[m[K
+[01m[Kmain.c:148:12:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before string constant
+  148 |     printf([01;31m[K"Page Fault Rate = %.3f\n"[m[K, (double)vm.faltas_pagina / vm.total_enderecos);
+      |            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kmain.c:148:40:[m[K [01;31m[Kerror: [m[Kexpected declaration specifiers or ‘[01m[K...[m[K’ before ‘[01m[K([m[K’ token
+  148 |     printf("Page Fault Rate = %.3f\n", [01;31m[K([m[Kdouble)vm.faltas_pagina / vm.total_enderecos);
+      |                                        [01;31m[K^[m[K
+[01m[Kmain.c:150:5:[m[K [01;35m[Kwarning: [m[Kdata definition has no type or storage class
+  150 |     [01;35m[Kfclose[m[K(arq_enderecos);
+      |     [01;35m[K^~~~~~[m[K
+[01m[Kmain.c:150:5:[m[K [01;31m[Kerror: [m[Ktype defaults to ‘[01m[Kint[m[K’ in declaration of ‘[01m[Kfclose[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-int-Wimplicit-int]8;;[m[K]
+[01m[Kmain.c:150:5:[m[K [01;31m[Kerror: [m[Kparameter names (without types) in function declaration [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wdeclaration-missing-parameter-type-Wdeclaration-missing-parameter-type]8;;[m[K]
+[01m[Kmain.c:151:5:[m[K [01;35m[Kwarning: [m[Kdata definition has no type or storage class
+  151 |     [01;35m[Kfclose[m[K(backing_store);
+      |     [01;35m[K^~~~~~[m[K
+[01m[Kmain.c:151:5:[m[K [01;31m[Kerror: [m[Ktype defaults to ‘[01m[Kint[m[K’ in declaration of ‘[01m[Kfclose[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-int-Wimplicit-int]8;;[m[K]
+[01m[Kmain.c:151:5:[m[K [01;31m[Kerror: [m[Kparameter names (without types) in function declaration [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#
