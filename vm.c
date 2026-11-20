@@ -82,6 +82,58 @@ int carregar_pagina_do_disco(VM *vm, int pagina, int frame, FILE *backing_store)
 
 }
 
+int buscar_tlb(VM *vm, int pagina) {
+    for (int i = 0; i < TAM_TLB; i++) {
+        if (vm->tlb[i].valido && vm->tlb[i].pagina == pagina) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void invalidar_tlb(VM *vm, int pagina) {
+    for (int i = 0; i < TAM_TLB; i++) {
+        if (vm->tlb[i].valido && vm->tlb[i].pagina == pagina) {
+            vm->tlb[i].valido = 0;
+            vm->tlb[i].pagina = -1;
+            vm->tlb[i].frame = -1;
+        }
+    }
+}
+
+void inserir_tlb(VM *vm, int pagina, int frame) {
+    int indice = -1;
+
+    for (int i = 0; i < TAM_TLB; i++) {
+        if (!vm->tlb[i].valido) {
+            indice = i;
+            break;
+        }
+    }
+
+    if (indice == -1) {
+        indice = 0;
+        for (int i = 1; i < TAM_TLB; i++) {
+            if (vm->politica_tlb == POLITICA_FIFO) {
+                if (vm->tlb[i].carregado_em < vm->tlb[indice].carregado_em) {
+                    indice = i;
+                }
+            } else {
+                if (vm->tlb[i].ultimo_uso < vm->tlb[indice].ultimo_uso) {
+                    indice = i;
+                }
+            }
+        }
+    }
+
+    vm->tlb[indice].pagina = pagina;
+    vm->tlb[indice].frame = frame;
+    vm->tlb[indice].valido = 1;
+    vm->tlb[indice].carregado_em = vm->relogio;
+    vm->tlb[indice].ultimo_uso = vm->relogio;
+
+}
+
 int traduzir_endereco(VM *vm, int endereco_logico, FILE *backing_store,
                         int *endereco_fisico, signed char *valor){
 
@@ -93,37 +145,52 @@ int traduzir_endereco(VM *vm, int endereco_logico, FILE *backing_store,
     vm->total_enderecos++;
 
     int frame;
+    int indice_tlb = buscar_tlb(vm, pagina);
 
-    if (vm->tabela_paginas[pagina].valido) {
-        
-        frame = vm->tabela_paginas[pagina].frame;
+    if (indice_tlb != -1) {
+
+        vm->acertos_tlb++;
+        frame = vm->tlb[indice_tlb].frame;
+
+        vm->tlb[indice_tlb].ultimo_uso = vm->relogio;
         vm->frames[frame].ultimo_uso = vm->relogio;
-
     }
 
     else {
 
-        vm->faltas_pagina++;
-
-        frame = escolher_frame(vm);
-
-        int pagina_antiga = vm->frames[frame].pagina;
-
-        if (pagina_antiga != -1) {
-            vm->tabela_paginas[pagina_antiga].valido = 0;
-            vm->tabela_paginas[pagina_antiga].frame = -1;
+        if (vm->tabela_paginas[pagina].valido) {
+            
+            frame = vm->tabela_paginas[pagina].frame;
+            vm->frames[frame].ultimo_uso = vm->relogio;
         }
 
-        if (!carregar_pagina_do_disco(vm, pagina, frame, backing_store)) {
-            return 0; 
+        else {
+
+            vm->faltas_pagina++;
+            frame = escolher_frame(vm);
+
+            int pagina_antiga = vm->frames[frame].pagina;
+
+            if (pagina_antiga != -1) {
+                vm->tabela_paginas[pagina_antiga].valido = 0;
+                vm->tabela_paginas[pagina_antiga].frame = -1;
+                invalidar_tlb(vm, pagina_antiga);
+            }
+
+            if (!carregar_pagina_do_disco(vm, pagina, frame, backing_store)) {
+                return 0;
+            }
+
+            vm->tabela_paginas[pagina].frame = frame;
+            vm->tabela_paginas[pagina].valido = 1;
+
+            vm->frames[frame].pagina = pagina;
+            vm->frames[frame].carregado_em = vm->relogio;
+            vm->frames[frame].ultimo_uso = vm->relogio;
+
         }
 
-        vm->tabela_paginas[pagina].frame = frame;
-        vm->tabela_paginas[pagina].valido = 1;
-
-        vm->frames[frame].pagina = pagina;
-        vm->frames[frame].carregado_em = vm->relogio; 
-        vm->frames[frame].ultimo_uso = vm->relogio;
+        inserir_tlb(vm, pagina, frame);
 
     }
 

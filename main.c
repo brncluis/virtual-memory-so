@@ -20,7 +20,6 @@ int ler_politica(char *texto, Politica *destino) {
 
 int parsear_endereco_linha(char *linha, int *endereco_out) {
     char *p = linha;
-
     while (*p != '\0' && isspace((unsigned char)*p)) {
         p++;
     }
@@ -77,6 +76,14 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+    FILE *saida = fopen("correct.txt", "w");
+    if (!saida) {
+        fprintf(stderr, "Erro: nao foi possivel criar 'correct.txt'.\n");
+        fclose(arq_enderecos);
+        fclose(backing_store);
+        return EXIT_FAILURE;
+    }
+
     VM vm;
     inicializar_vm(&vm, pol_pagina, pol_tlb);
 
@@ -91,6 +98,7 @@ int main(int argc, char *argv[]) {
                     numero_linha, argv[1]);
             fclose(arq_enderecos);
             fclose(backing_store);
+            fclose(saida);
             return EXIT_FAILURE;
         }
 
@@ -101,27 +109,29 @@ int main(int argc, char *argv[]) {
             fprintf(stderr, "Erro: falha ao ler 'BACKING_STORE.bin' na linha %d.\n", numero_linha);
             fclose(arq_enderecos);
             fclose(backing_store);
+            fclose(saida);
             return EXIT_FAILURE;
         }
 
-        if (vm.total_enderecos <= 5) {
-            printf("Virtual address: %d Physical address: %d Value: %d\n",
-                   endereco_logico, endereco_fisico, valor);
-        }
+        fprintf(saida, "Virtual address: %d Physical address: %d Value: %d\n", endereco_logico, endereco_fisico, valor);
     }
 
     if (vm.total_enderecos == 0) {
         fprintf(stderr, "Erro: o arquivo '%s' esta vazio.\n", argv[1]);
         fclose(arq_enderecos);
         fclose(backing_store);
+        fclose(saida);
         return EXIT_FAILURE;
     }
 
-    printf("Number of Translated Addresses = %d\n", vm.total_enderecos);
-    printf("Page Faults = %d\n", vm.faltas_pagina);
-    printf("Page Fault Rate = %.3f\n", (double)vm.faltas_pagina / vm.total_enderecos);
+    fprintf(saida, "Number of Translated Addresses = %d\n", vm.total_enderecos);
+    fprintf(saida, "Page Faults = %d\n", vm.faltas_pagina);
+    fprintf(saida, "Page Fault Rate = %.3f\n", (double)vm.faltas_pagina / vm.total_enderecos);
+    fprintf(saida, "TLB Hits = %d\n", vm.acertos_tlb);
+    fprintf(saida, "TLB Hit Rate = %.3f\n", (double)vm.acertos_tlb / vm.total_enderecos);
 
     fclose(arq_enderecos);
     fclose(backing_store);
+    fclose(saida);
     return EXIT_SUCCESS;
 }
