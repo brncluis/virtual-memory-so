@@ -104,8 +104,9 @@ int main(int argc, char *argv[]) {
 
         int endereco_fisico = 0;
         signed char valor = 0;
+        int indice_tlb = 0;
 
-        if (!traduzir_endereco(&vm, endereco_logico, backing_store, &endereco_fisico, &valor)) {
+        if (!traduzir_endereco(&vm, endereco_logico, backing_store, &endereco_fisico, &valor, &indice_tlb)) {
             fprintf(stderr, "Erro: falha ao ler 'BACKING_STORE.bin' na linha %d.\n", numero_linha);
             fclose(arq_enderecos);
             fclose(backing_store);
@@ -113,7 +114,8 @@ int main(int argc, char *argv[]) {
             return EXIT_FAILURE;
         }
 
-        fprintf(saida, "Virtual address: %d Physical address: %d Value: %d\n", endereco_logico, endereco_fisico, valor);
+        fprintf(saida, "Virtual address: %d TLB: %d Physical address: %d Value: %d\n",
+        endereco_logico, indice_tlb, endereco_fisico, valor);
     }
 
     if (vm.total_enderecos == 0) {

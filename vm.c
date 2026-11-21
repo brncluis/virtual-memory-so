@@ -101,7 +101,7 @@ void invalidar_tlb(VM *vm, int pagina) {
     }
 }
 
-void inserir_tlb(VM *vm, int pagina, int frame) {
+int inserir_tlb(VM *vm, int pagina, int frame) {
     int indice = -1;
 
     for (int i = 0; i < TAM_TLB; i++) {
@@ -132,10 +132,11 @@ void inserir_tlb(VM *vm, int pagina, int frame) {
     vm->tlb[indice].carregado_em = vm->relogio;
     vm->tlb[indice].ultimo_uso = vm->relogio;
 
+    return indice;
 }
 
 int traduzir_endereco(VM *vm, int endereco_logico, FILE *backing_store,
-                        int *endereco_fisico, signed char *valor){
+                      int *endereco_fisico, signed char *valor, int *indice_tlb_out) {
 
     int pagina;
     int deslocamento;
@@ -148,24 +149,16 @@ int traduzir_endereco(VM *vm, int endereco_logico, FILE *backing_store,
     int indice_tlb = buscar_tlb(vm, pagina);
 
     if (indice_tlb != -1) {
-
         vm->acertos_tlb++;
         frame = vm->tlb[indice_tlb].frame;
 
         vm->tlb[indice_tlb].ultimo_uso = vm->relogio;
         vm->frames[frame].ultimo_uso = vm->relogio;
-    }
-
-    else {
-
+    } else {
         if (vm->tabela_paginas[pagina].valido) {
-            
             frame = vm->tabela_paginas[pagina].frame;
             vm->frames[frame].ultimo_uso = vm->relogio;
-        }
-
-        else {
-
+        } else {
             vm->faltas_pagina++;
             frame = escolher_frame(vm);
 
@@ -187,15 +180,13 @@ int traduzir_endereco(VM *vm, int endereco_logico, FILE *backing_store,
             vm->frames[frame].pagina = pagina;
             vm->frames[frame].carregado_em = vm->relogio;
             vm->frames[frame].ultimo_uso = vm->relogio;
-
         }
 
-        inserir_tlb(vm, pagina, frame);
-
+        indice_tlb = inserir_tlb(vm, pagina, frame);
     }
 
     *endereco_fisico = frame * TAM_FRAME + deslocamento;
     *valor = vm->ram[frame][deslocamento];
+    *indice_tlb_out = indice_tlb;
     return 1;
-
 }

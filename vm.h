@@ -51,7 +51,9 @@ typedef struct {
 
 void inicializar_vm(VM *vm, Politica pol_pagina, Politica pol_tlb);
 void extrair_pagina_deslocamento(int endereco_logico, int *pagina, int *deslocamento);
-int traduzir_endereco(VM *vm, int endereco_logico, FILE *backing_store, int *endereco_fisico, signed char *valor);
+int traduzir_endereco(VM *vm, int endereco_logico, FILE *backing_store,
+                      int *endereco_fisico_out, signed char *valor_out,
+                      int *indice_tlb_out);
 
 
 #endif
