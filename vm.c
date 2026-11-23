@@ -1,5 +1,13 @@
 #include "vm.h"
 #include <string.h>
+#include <pthread.h>
+
+typedef struct {
+    VM *vm;
+    int pagina;
+    int i;
+    int *encontrado;
+} BuscaDaTLB;
 
 void inicializar_vm(VM *vm, Politica pol_pagina, Politica pol_tlb) {
     memset(vm->ram, 0, sizeof(vm->ram));
@@ -82,13 +90,44 @@ int carregar_pagina_do_disco(VM *vm, int pagina, int frame, FILE *backing_store)
 
 }
 
+void *buscar_entrada_da_tlb(void *arg) {
+
+    BuscaDaTLB *argumento = (BuscaDaTLB*)arg;
+    VM *vm = argumento->vm;
+    int pagina = argumento->pagina;
+    int i = argumento->i;
+
+    if (vm->tlb[i].valido && vm->tlb[i].pagina == pagina) {
+        *argumento->encontrado = i;
+    }
+
+    return NULL;
+
+}
+
 int buscar_tlb(VM *vm, int pagina) {
+
+    pthread_t threads[TAM_TLB];
+    BuscaDaTLB argumentos[TAM_TLB];
+    int thread_criada[TAM_TLB];
+    int encontrado = -1;
+
     for (int i = 0; i < TAM_TLB; i++) {
-        if (vm->tlb[i].valido && vm->tlb[i].pagina == pagina) {
-            return i;
+        argumentos[i] = (BuscaDaTLB){ vm, pagina, i, &encontrado }; 
+        thread_criada[i] = (pthread_create(&threads[i], NULL, buscar_entrada_da_tlb, &argumentos[i]) == 0); 
+        if (!thread_criada[i]) {
+            buscar_entrada_da_tlb(&argumentos[i]); 
         }
     }
-    return -1;
+
+    for (int i = 0; i < TAM_TLB; i++) { 
+        if (thread_criada[i]) {
+            pthread_join(threads[i], NULL); 
+        }
+    }
+
+    return encontrado; 
+
 }
 
 void invalidar_tlb(VM *vm, int pagina) {

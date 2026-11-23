@@ -3206,3 +3206,121 @@ To https://github.com/brncluis/virtual-memory-so
 [?2004l]133;C\]666;vte.shell.preexec!\exit
 
 Script done on 2026-11-21 07:34:30-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-11-23 15:41:10-03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="70" LINES="16"]
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ vam os[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[7mmak[27m[7me[27m[7m [27m
+[7mtime ./vm adresses.txt lru fifo[27m[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+time ./vm adresses.txt lru fifo
+[?2004lgcc -Wall -Wextra -pthread main.c vm.c -o vm
+
+real	0m0.328s
+user	0m0.069s
+sys	0m0.519s
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7me[27m
+[7mtime ./vm adresses.txt lru fifo[27m
+[7mgcc -Wall -Wextra -pthread main.c vm.c -o vm[27m
+
+[7mreal    0m0.328s[27m
+[7muser    0m0.069s[27m
+[7msys     0m0.519s[27m
+[7mbrncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ [27m
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce
+time ./vm adresses.txt lru fifo
+gcc -Wall -Wextra -pthread main.c vm.c -o vm
+
+real    0m0.328s
+user    0m0.069s
+sys     0m0.519s
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ 
+
+
+
+[K[A[K[A[K[A[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kmak e clean
+[?2004lrm -f vm correct.txt
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ mak e
+[?2004lgcc -Wall -Wextra -pthread main.c vm.c -o vm
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mmak[27m[7me[27m[7m [27m
+[7mtime ./vm adresses.txt lru fifo[27m[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make
+time ./vm adresses.txt lru fifo
+[?2004lgcc -Wall -Wextra -pthread main.c vm.c -o vm
+
+real	0m0.003s
+user	0m0.003s
+sys	0m0.000s
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ mak e
+[?2004lgcc -Wall -Wextra -pthread main.c vm.c -o vm
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [H[2J]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ script -a evidencias.log  
+Script started, output log file is 'evidencias.log'.
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ make 
+time ./vm adresses.txt lru fifo
+gcc -Wall -Wextra -pthread main.c vm.c -o vm
+
+real    0m0.328s
+user    0m0.069s
+[7msys     0m0.519s[27m
+[7mbrncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ mak[27m[7me[27m[7m clean [27m
+[7mrm -f vm correct.txt[27m
+[7mbrncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ mak[27m[7me[27m[7m [27m
+[7mgcc -Wall -Wextra -pthread main.c vm.c -o vm[27m
+[7mbrncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ mak[27m[7me[27m[7m [27m
+[7mtime ./vm adresses.txt lru fifo[27m
+[7mgcc -Wall -Wextra -pthread main.c vm.c -o vm[27m
+
+[7mreal    0m0.003s[27m
+[7muser    0m0.003s[27m
+[7msys     0m0.000s[27m
+[7mbrncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ [27m[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Asys     0m0.519s
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ make clean
+rm -f vm correct.txt
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ make
+gcc -Wall -Wextra -pthread main.c vm.c -o vm
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ make
+time ./vm adresses.txt lru fifo
+gcc -Wall -Wextra -pthread main.c vm.c -o vm
+
+real    0m0.003s
+user    0m0.003s
+sys     0m0.000s
+[1Pbrncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[H[2J]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ script -a evidencias.log  
+Script started, output log file is 'evidencias.log'.
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ make 
+time ./vm adresses.txt lru fifo
+gcc -Wall -Wextra -pthread main.c vm.c -o vm
+
+real    0m0.328s
+user    0m0.069s
+sys     0m0.519s
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ make clean 
+rm -f vm correct.txt
+brncluis@luisdesktop:~/Projetos/ProjetoSO_1/virtual-machine/lhass$ mak [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K^C[?2004l[?2004h[?2004l
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mtim[27m[7me[27m[7m ./vm adresses.txt lru fifo[27m[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ time ./vm adresses.txt lru fifo
+[?2004l
+real	0m0.326s
+user	0m0.075s
+sys	0m0.512s
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [K]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ [7mmake && ./vm adresses.txt lru fifo && diff[27m[7m [27m[7mcorrect.txt correctprofessor.txt && echo "IGUAL AO GABARITO" [27m
+[7m./vm adresses.txt lru          # erro: número de argumentos[27m
+[7m./vm adresses.txt LRU fifo     # erro: algoritmo inválido[27m
+[7m./vm nao_existe.txt lru fifo   # erro: arquivo não existe[27m[A[A[A[A]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ make && ./vm adresses.txt lru fifo && diff correct.txt correctprofessor.txt && echo "IGUAL AO GABARITO"
+./vm adresses.txt lru          # erro: número de argumentos
+./vm adresses.txt LRU fifo     # erro: algoritmo inválido
+./vm nao_existe.txt lru fifo   # erro: arquivo não existe
+[?2004lgcc -Wall -Wextra -pthread main.c vm.c -o vm
+IGUAL AO GABARITO
+Erro: numero invalido de argumentos.
+Uso: ./vm <arquivo_enderecos> <fifo|lru> <fifo|lru>
+Erro: algoritmo de pagina invalido 'LRU'. Use 'fifo' ou 'lru'.
+Erro: nao foi possivel abrir o arquivo 'nao_existe.txt'.
+[?2004h]0;brncluis@luisdesktop: ~/Projetos/ProjetoSO_1/virtual-machine/lhass[01;32mbrncluis@luisdesktop[00m:[01;34m~/Projetos/ProjetoSO_1/virtual-machine/lhass[00m$ ew[K[Kexit
+[?2004lexit
+
+Script done on 2026-11-23 15:53:17-03:00 [COMMAND_EXIT_CODE="1"]
